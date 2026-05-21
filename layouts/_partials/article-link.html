@@ -19,9 +19,9 @@
             sm:max-w-[10rem]" src="{{ .Permalink }}"
           {{ else }}
             class="w-24 rounded-md sm:w-40" srcset="
-            {{- (.Fill "160x120 smart").Permalink }}
-            160w, {{- (.Fill "320x240 smart").Permalink }} 2x"
-            src="{{ (.Fill "160x120 smart").Permalink }}" width="160" height="120"
+            {{- (.Fit "160x160").Permalink }}
+            160w, {{- (.Fit "320x320").Permalink }} 2x"
+            src="{{ (.Fit "160x160").Permalink }}"
           {{ end }}
           {{ if $.Site.Params.enableImageLazyLoading | default true }}
             loading="lazy"
